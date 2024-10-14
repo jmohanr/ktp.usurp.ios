@@ -45,6 +45,7 @@ jobs:
           # Set the provisioning profile
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+          
         env:
           CERTIFICATE: ${{ secrets.BUILD_DISTRIBUTION_CERTIFICATE_BASE64 }}  # Base64 encoded distribution certificate
           CERTIFICATE_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}  # Password for the certificate
@@ -57,8 +58,10 @@ jobs:
                      -configuration Release \
                      -archivePath ${{ github.workspace }}/build/${{ matrix.target }}.xcarchive \
                      SKIP_INSTALL=NO \
+                    CODE_SIGN_IDENTITY="iPhone Distribution" \  # or iPhone Development based on your need
                      CODE_SIGNING_REQUIRED=YES \
                      CODE_SIGNING_ALLOWED=YES
+                      -allowProvisioningUpdates
         env:
           ACTION: archive
 
