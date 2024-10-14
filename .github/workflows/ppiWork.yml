@@ -59,7 +59,10 @@ jobs:
                      SKIP_INSTALL=NO \
                      CODE_SIGNING_REQUIRED=YES \
                      CODE_SIGNING_ALLOWED=YES \
+                     PROVISIONING_PROFILE_SPECIFIER="ede85c27-79ff-4f05-89e3-54ae938857ef" \  # Specify the profile UUID
+                     CODE_SIGN_IDENTITY="iPhone Distribution" \
                      -allowProvisioningUpdates
+
         env:
           ACTION: archive
 
