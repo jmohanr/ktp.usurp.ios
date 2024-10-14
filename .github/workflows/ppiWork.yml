@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         target: 
-          - ppi  # Add more targets here if needed
+          - ppi  # Add more targets if needed
 
     steps:
       # Step 1: Checkout the code
@@ -53,7 +53,7 @@ jobs:
           CERTIFICATE_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}  # Password for the certificate
           PROVISIONING_PROFILE: ${{ secrets.PP_BUILD_PROVISION_PROFILE_BASE64 }}  # Base64 encoded provisioning profile
 
-      # Step 4: Build and Archive
+      # Step 4: Build and Archive with Manual Signing
       - name: Build and Archive
         run: |
           xcodebuild -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
@@ -61,11 +61,13 @@ jobs:
                      -configuration Release \
                      -archivePath ${{ github.workspace }}/build/${{ matrix.target }}.xcarchive \
                      SKIP_INSTALL=NO \
-                     CODE_SIGN_STYLE="Automatic" \
+                     CODE_SIGN_STYLE="Manual" \
                      CODE_SIGNING_REQUIRED=YES \
                      CODE_SIGNING_ALLOWED=YES \
+                     PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PP_UUID }}" \
+                     CODE_SIGN_IDENTITY="iPhone Distribution" \
                      DEVELOPMENT_TEAM="F4E4V7ZGJJ" \
-                     -allowProvisioningUpdates archive  # Explicit archive action
+                     -allowProvisioningUpdates
         env:
           ACTION: archive
 
