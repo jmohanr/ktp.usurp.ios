@@ -51,11 +51,18 @@ jobs:
           -sdk iphoneos \
           -destination generic/platform=iOS \
           clean archive
-      - name: export ipa
+
+      - name: Export IPA
         env: 
-           EXPORT_PLIST: ${{ secrets.PPI_EXPORT_PLIST}}
-           run: |
-               EXPORT_PLIST_PATH=$RUNNER_TEMP/ExportOptions.plist
-               echo -n "$EXPORT_PLIST" | base64 --decode --output $EXPORT_PLIST_PATH
-               xcodebuild -exportArchive -archivePath $RUNNER_TEMP/ppi.xcarchive -exportOptionsPlist $EXPORT_PLIST_PATH -exportPath $RUNNER_TEMP/export
-           
+          EXPORT_PLIST: ${{ secrets.PPI_EXPORT_PLIST }}
+        run: |
+          EXPORT_PLIST_PATH=$RUNNER_TEMP/ExportOptions.plist
+          
+          # Decode the export options plist from base64
+          echo -n "$EXPORT_PLIST" | base64 --decode --output $EXPORT_PLIST_PATH
+
+          # Export the IPA
+          xcodebuild -exportArchive \
+            -archivePath $RUNNER_TEMP/ppi.xcarchive \
+            -exportOptionsPlist $EXPORT_PLIST_PATH \
+            -exportPath $RUNNER_TEMP/export
