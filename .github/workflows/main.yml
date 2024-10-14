@@ -47,7 +47,14 @@ jobs:
           xcodebuild archive -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
           -scheme ppi \
           -configuration Release \
-          -archivePath ./build/ppi.xcarchive \
+          -archivePath $RUNNER_TEMP/ppi.xcarchive \
           -sdk iphoneos \
-          -allowProvisioningUpdates \
+          -destination generic/platform=iOS \
           clean archive
+      - name: export ipa
+        env:
+          EXPORT_OPTIONS_PLIST: ${{ secrets.PPI_EXPORT_PLIST }}
+        run: |
+          EXPORT_OPTS_PATH=$RUNNER_TEMP/ExportOptions.plist
+          echo -n "$PPI_EXPORT_PLIST" | base64 --decode -o $EXPORT_OPTS_PATH
+          xcodebuild -exportArchive -archivePath $RUNNER_TEMP/ppi.xcarchive -exportOptionsPlist $EXPORT_OPTS_PATH -exportPath $RUNNER_TEMP/build
