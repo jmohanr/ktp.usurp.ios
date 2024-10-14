@@ -57,7 +57,7 @@ jobs:
                      -configuration Release \
                      -archivePath ${{ github.workspace }}/build/${{ matrix.target }}.xcarchive \
                      SKIP_INSTALL=NO \
-                     CODE_SIGN_IDENTITY="iPhone Distribution" \
+                     CODE_SIGN_IDENTITY="Apple Distribution: Kaplan, Inc" \
                      CODE_SIGNING_REQUIRED=YES \
                      CODE_SIGNING_ALLOWED=YES
         env:
