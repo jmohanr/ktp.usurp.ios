@@ -1,0 +1,36 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/Kaplan/Library/Developer/Xcode/DerivedData/ktp.usurp.ios-dyecszmxxrhzoycoigqakwwcvahq/Build/Intermediates.noindex/ArchiveIntermediates/ppi/InstallationBuildProductsLocation/Applications/ppi.app/ppi'
+relocations:
+  - { offsetInCU: 0x27, offset: 0x542B9, size: 0x8, addend: 0x0, symName: '_$s3ppi14ViewControllerC11viewDidLoadyyFTo', symObjAddr: 0x0, symBinAddr: 0x100004000, symSize: 0x3C }
+  - { offsetInCU: 0x61, offset: 0x542F3, size: 0x8, addend: 0x0, symName: '_$s3ppi14ViewControllerC11viewDidLoadyyFTo', symObjAddr: 0x0, symBinAddr: 0x100004000, symSize: 0x3C }
+  - { offsetInCU: 0xBC, offset: 0x5434E, size: 0x8, addend: 0x0, symName: '_$s3ppi14ViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfcTo', symObjAddr: 0x3C, symBinAddr: 0x10000403C, symSize: 0x9C }
+  - { offsetInCU: 0x116, offset: 0x543A8, size: 0x8, addend: 0x0, symName: '_$s3ppi14ViewControllerC5coderACSgSo7NSCoderC_tcfcTo', symObjAddr: 0xD8, symBinAddr: 0x1000040D8, symSize: 0x44 }
+  - { offsetInCU: 0x170, offset: 0x54402, size: 0x8, addend: 0x0, symName: '_$s3ppi14ViewControllerCMa', symObjAddr: 0x14C, symBinAddr: 0x10000414C, symSize: 0x20 }
+  - { offsetInCU: 0x326, offset: 0x545B8, size: 0x8, addend: 0x0, symName: '_$s3ppi14ViewControllerCfD', symObjAddr: 0x11C, symBinAddr: 0x10000411C, symSize: 0x30 }
+  - { offsetInCU: 0x27, offset: 0x54602, size: 0x8, addend: 0x0, symName: '_$s3ppi11AppDelegateC11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0j6LaunchI3KeyaypGSgtFTo', symObjAddr: 0x0, symBinAddr: 0x10000416C, symSize: 0x8 }
+  - { offsetInCU: 0x4B, offset: 0x54626, size: 0x8, addend: 0x0, symName: '_$s3ppi11AppDelegateC11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0j6LaunchI3KeyaypGSgtFTo', symObjAddr: 0x0, symBinAddr: 0x10000416C, symSize: 0x8 }
+  - { offsetInCU: 0x8C, offset: 0x54667, size: 0x8, addend: 0x0, symName: '_$s3ppi11AppDelegateC11application_26configurationForConnecting7optionsSo20UISceneConfigurationCSo13UIApplicationC_So0I7SessionCSo0I17ConnectionOptionsCtFTo', symObjAddr: 0x8, symBinAddr: 0x100004174, symSize: 0xE0 }
+  - { offsetInCU: 0xE9, offset: 0x546C4, size: 0x8, addend: 0x0, symName: '_$s3ppi11AppDelegateC11application_23didDiscardSceneSessionsySo13UIApplicationC_ShySo14UISceneSessionCGtFTo', symObjAddr: 0xE8, symBinAddr: 0x100004254, symSize: 0x4 }
+  - { offsetInCU: 0x11B, offset: 0x546F6, size: 0x8, addend: 0x0, symName: '_$s3ppi11AppDelegateCACycfcTo', symObjAddr: 0xEC, symBinAddr: 0x100004258, symSize: 0x3C }
+  - { offsetInCU: 0x180, offset: 0x5475B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x158, symBinAddr: 0x1000042C4, symSize: 0x88 }
+  - { offsetInCU: 0x1BA, offset: 0x54795, size: 0x8, addend: 0x0, symName: '_$s3ppi11AppDelegateCMa', symObjAddr: 0x1E0, symBinAddr: 0x10000434C, symSize: 0x20 }
+  - { offsetInCU: 0x3C8, offset: 0x549A3, size: 0x8, addend: 0x0, symName: '_$s3ppi11AppDelegateCfD', symObjAddr: 0x128, symBinAddr: 0x100004294, symSize: 0x30 }
+  - { offsetInCU: 0x27, offset: 0x54A0E, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC6windowSo8UIWindowCSgvgTo', symObjAddr: 0x0, symBinAddr: 0x10000436C, symSize: 0x10 }
+  - { offsetInCU: 0x61, offset: 0x54A48, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC6windowSo8UIWindowCSgvgTo', symObjAddr: 0x0, symBinAddr: 0x10000436C, symSize: 0x10 }
+  - { offsetInCU: 0x81, offset: 0x54A68, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC6windowSo8UIWindowCSgvgTo', symObjAddr: 0x0, symBinAddr: 0x10000436C, symSize: 0x10 }
+  - { offsetInCU: 0xB9, offset: 0x54AA0, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC6windowSo8UIWindowCSgvsTo', symObjAddr: 0x10, symBinAddr: 0x10000437C, symSize: 0x34 }
+  - { offsetInCU: 0xFC, offset: 0x54AE3, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC5scene_13willConnectTo7optionsySo7UISceneC_So0I7SessionCSo0I17ConnectionOptionsCtFTo', symObjAddr: 0x44, symBinAddr: 0x1000043B0, symSize: 0x4 }
+  - { offsetInCU: 0x118, offset: 0x54AFF, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC18sceneDidDisconnectyySo7UISceneCFTo', symObjAddr: 0x48, symBinAddr: 0x1000043B4, symSize: 0x4 }
+  - { offsetInCU: 0x134, offset: 0x54B1B, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC20sceneDidBecomeActiveyySo7UISceneCFTo', symObjAddr: 0x4C, symBinAddr: 0x1000043B8, symSize: 0x4 }
+  - { offsetInCU: 0x150, offset: 0x54B37, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC21sceneWillResignActiveyySo7UISceneCFTo', symObjAddr: 0x50, symBinAddr: 0x1000043BC, symSize: 0x4 }
+  - { offsetInCU: 0x16C, offset: 0x54B53, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC24sceneWillEnterForegroundyySo7UISceneCFTo', symObjAddr: 0x54, symBinAddr: 0x1000043C0, symSize: 0x4 }
+  - { offsetInCU: 0x188, offset: 0x54B6F, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateC23sceneDidEnterBackgroundyySo7UISceneCFTo', symObjAddr: 0x58, symBinAddr: 0x1000043C4, symSize: 0x4 }
+  - { offsetInCU: 0x1BA, offset: 0x54BA1, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateCACycfcTo', symObjAddr: 0x5C, symBinAddr: 0x1000043C8, symSize: 0x48 }
+  - { offsetInCU: 0x20C, offset: 0x54BF3, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateCfETo', symObjAddr: 0xD4, symBinAddr: 0x100004440, symSize: 0x10 }
+  - { offsetInCU: 0x23B, offset: 0x54C22, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateCMa', symObjAddr: 0xE4, symBinAddr: 0x100004450, symSize: 0x20 }
+  - { offsetInCU: 0x3A6, offset: 0x54D8D, size: 0x8, addend: 0x0, symName: '_$s3ppi13SceneDelegateCfD', symObjAddr: 0xA4, symBinAddr: 0x100004410, symSize: 0x30 }
+  - { offsetInCU: 0x2B, offset: 0x54DDB, size: 0x8, addend: 0x0, symName: '_$s3ppi19ResourceBundleClass33_A48069770682ED428B9C0B90A3D3F040LLCfD', symObjAddr: 0x0, symBinAddr: 0x100004470, symSize: 0x10 }
+  - { offsetInCU: 0x6D, offset: 0x54E1D, size: 0x8, addend: 0x0, symName: '_$s3ppi19ResourceBundleClass33_A48069770682ED428B9C0B90A3D3F040LLCMa', symObjAddr: 0x10, symBinAddr: 0x100004480, symSize: 0x20 }
+  - { offsetInCU: 0x14E, offset: 0x54EFE, size: 0x8, addend: 0x0, symName: '_$s3ppi19ResourceBundleClass33_A48069770682ED428B9C0B90A3D3F040LLCfD', symObjAddr: 0x0, symBinAddr: 0x100004470, symSize: 0x10 }
+...
