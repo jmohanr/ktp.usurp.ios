@@ -44,7 +44,7 @@ jobs:
           # This step must use the custom keychain we created
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
         run: |
-          xcodebuild archive -workspace ktp.usurp.ios.xcworkspace \
+          xcodebuild archive -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
           -scheme ppi \
           -configuration Release \
           -archivePath ./build/ppi.xcarchive \
