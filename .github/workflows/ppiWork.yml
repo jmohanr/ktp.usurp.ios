@@ -66,7 +66,7 @@ jobs:
                      CODE_SIGNING_ALLOWED=YES \
                      PROVISIONING_PROFILE_SPECIFIER="${{ secrets.PP_UUID }}" \
                      CODE_SIGN_IDENTITY="iPhone Distribution" \
-                     DEVELOPMENT_TEAM="F4E4V7ZGJJ" \
+                     DEVELOPMENT_TEAM="5A32MELP94" \
                      -allowProvisioningUpdates
         env:
           ACTION: archive
