@@ -46,7 +46,7 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
         env:
-          CERTIFICATE: ${{ secrets.BUILD_DISTRIBUTION_CERTIFICATE_BASE64 }}  # Base64 encoded distribution certificate
+          CERTIFICATE: ${{ secrets.BUILD_DEVELOP_CERTIFICATE_BASE64 }}  # Base64 encoded distribution certificate
           CERTIFICATE_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}  # Password for the certificate
           PROVISIONING_PROFILE: ${{ secrets.PP_BUILD_PROVISION_PROFILE_BASE64 }}  # Base64 encoded provisioning profile
 
