@@ -46,7 +46,7 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
         env:
-          CERTIFICATE: ${{ secrets.BUILD_DEVELOP_CERTIFICATE_BASE64 }}  # Base64 encoded distribution certificate
+          CERTIFICATE: ${{ secrets.BUILD_DISTRIBUTION_CERTIFICATE_BASE64 }}  # Base64 encoded distribution certificate
           CERTIFICATE_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}  # Password for the certificate
           PROVISIONING_PROFILE: ${{ secrets.PP_BUILD_PROVISION_PROFILE_BASE64 }}  # Base64 encoded provisioning profile
 
@@ -57,12 +57,11 @@ jobs:
                      -configuration Release \
                      -archivePath ${{ github.workspace }}/build/${{ matrix.target }}.xcarchive \
                      SKIP_INSTALL=NO \
-                      CODE_SIGN_STYLE="Automatic" \
+                     CODE_SIGN_STYLE="Automatic" \
                      CODE_SIGNING_REQUIRED=YES \
                      CODE_SIGNING_ALLOWED=YES \
                      DEVELOPMENT_TEAM="F4E4V7ZGJJ" \  # Use your team ID
                      -allowProvisioningUpdates
-
         env:
           ACTION: archive
 
