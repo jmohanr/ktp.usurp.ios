@@ -22,10 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Ruby and Cocoapods
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7'  # Adjust based on your project's Ruby version
+      - name: Cocoapods
       - run: |
           gem install cocoapods
           pod install
