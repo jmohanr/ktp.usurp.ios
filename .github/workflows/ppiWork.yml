@@ -57,8 +57,10 @@ jobs:
                      -configuration Release \
                      -archivePath ${{ github.workspace }}/build/${{ matrix.target }}.xcarchive \
                      SKIP_INSTALL=NO \
+                      CODE_SIGN_STYLE="Automatic" \
                      CODE_SIGNING_REQUIRED=YES \
                      CODE_SIGNING_ALLOWED=YES \
+                     DEVELOPMENT_TEAM="F4E4V7ZGJJ" \  # Use your team ID
                      -allowProvisioningUpdates
 
         env:
