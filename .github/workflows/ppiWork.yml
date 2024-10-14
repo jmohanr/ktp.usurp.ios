@@ -29,7 +29,7 @@ jobs:
       - run: |
           gem install cocoapods
           pod install
-        working-directory: ./YourProjectDirectory  # Adjust as needed
+        working-directory: ./ktp.usurp.ios  # Adjust as needed
 
       - name: Decrypt and set up distribution certificates and profiles
         run: |
