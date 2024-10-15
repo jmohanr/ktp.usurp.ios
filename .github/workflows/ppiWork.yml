@@ -44,11 +44,12 @@ jobs:
 
       - name: build archive
         run: |
-          xcodebuild -scheme ppi \
+          xcodebuild archive -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
+          -scheme ppi \
+          -configuration Release \
           -archivePath $RUNNER_TEMP/ppi.xcarchive \
           -sdk iphoneos \
-          -configuration Debug \
           -destination generic/platform=iOS \
-          clean archive          
+          clean archive
 
     
