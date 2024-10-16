@@ -12,12 +12,10 @@ jobs:
             cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64"
             profile: "PP_BUILD_PROVISION_PROFILE_BASE64"
             plist: "PPI_EXPORT_PLIST"
-            ipa_name: "ppi.ipa"
           - scheme: "pance"
             cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64"
             profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64"
             plist: "PANCE_EXPORT_PLIST"
-            ipa_name: "pance.ipa"
 
     steps:
       - name: Check Xcode version
@@ -93,5 +91,5 @@ jobs:
       - name: Upload IPA
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.config.ipa_name }}
-          path: $RUNNER_TEMP/build/
+          name: ${{ matrix.config.scheme }}.ipa
+          path: $RUNNER_TEMP/build/${{ matrix.config.scheme }}
