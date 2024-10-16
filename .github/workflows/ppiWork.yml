@@ -67,6 +67,11 @@ jobs:
             -exportOptionsPlist $EXPORT_OPTS_PATH \
             -exportPath $RUNNER_TEMP/build
 
+      # Add a debug step to check the existence of the .ipa file
+      - name: List files in build folder (debugging)
+        run: ls $RUNNER_TEMP/build
+
+      # Ensure .ipa is being uploaded from the correct path
       - name: Upload application for ${{ matrix.target.scheme }}
         uses: actions/upload-artifact@v3
         with:
