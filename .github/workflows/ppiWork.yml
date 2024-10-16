@@ -71,6 +71,12 @@ jobs:
             -exportOptionsPlist $EXPORT_OPTS_PATH \
             -exportPath $RUNNER_TEMP/build/${{ matrix.target.scheme }}
 
+      # Additional Debugging Step After Export
+      - name: Debug IPA export (checking build path after export)
+        run: |
+          echo "Checking the export directory for .ipa"
+          ls -al $RUNNER_TEMP/build/${{ matrix.target.scheme }}
+
       - name: List build output (debugging)
         run: ls $RUNNER_TEMP/build/${{ matrix.target.scheme }}
 
