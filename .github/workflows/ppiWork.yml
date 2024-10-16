@@ -5,8 +5,6 @@ jobs:
   build_with_signing:
     runs-on: macos-latest
     steps:
-      # this was more debug as was curious what came pre-installed
-      # GitHub shares this online, e.g. https://github.com/actions/runner-images/blob/macOS-12/20230224.1/images/macos/macos-12-Readme.md
       - name: check Xcode version
         run: /usr/bin/xcodebuild -version
 
@@ -43,6 +41,9 @@ jobs:
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles          
 
       - name: build archive
+        env:
+          CODE_SIGN_IDENTITY: "iPhone Developer: Kaplan, Inc"
+          PROVISIONING_PROFILE_SPECIFIER: "KaplanPPI"
         run: |
           xcodebuild archive -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
           -scheme ppi \
@@ -50,7 +51,6 @@ jobs:
           -archivePath $RUNNER_TEMP/ppi.xcarchive \
           -sdk iphoneos \
           -destination generic/platform=iOS \
-          -allowProvisioningUpdates
-          clean archive
-
-    
+          -allowProvisioningUpdates \
+          CODE_SIGN_IDENTITY="$CODE_SIGN_IDENTITY" \
+          PROVISIONING_PROFILE_SPECIFIER="$PROVISIONING_PROFILE_SPECIFIER"
