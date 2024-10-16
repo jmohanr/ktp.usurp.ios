@@ -7,9 +7,8 @@ jobs:
     strategy:
       matrix:
         target:
-          - { scheme: “ppi”, cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PP_BUILD_PROVISION_PROFILE_BASE64", ipa_name: “ppi.ipa", plist: "PPI_EXPORT_PLIST" }
-          - { scheme: “pance”, cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PP_BUILD_PROVISION_PROFILE_BASE64", ipa_name: “pance.ipa", plist: "PANCE_EXPORT_PLIST" }
- 
+          - { scheme: "ppi", cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PP_BUILD_PROVISION_PROFILE_BASE64", ipa_name: "ppi.ipa", plist: "PPI_EXPORT_PLIST" }
+          - { scheme: "pance", cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PP_BUILD_PROVISION_PROFILE_BASE64", ipa_name: "pance.ipa", plist: "PANCE_EXPORT_PLIST" }
 
     steps:
       - name: check Xcode version
@@ -72,5 +71,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.target.ipa_name }}
-          path: ${{ runner.temp }}/build/${{ matrix.target.ipa_name }}
+          path: $RUNNER_TEMP/build/${{ matrix.target.ipa_name }}
           retention-days: 3
