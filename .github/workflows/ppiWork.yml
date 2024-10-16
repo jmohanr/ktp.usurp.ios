@@ -50,6 +50,7 @@ jobs:
           -archivePath $RUNNER_TEMP/ppi.xcarchive \
           -sdk iphoneos \
           -destination generic/platform=iOS \
+          -allowProvisioningUpdates
           clean archive
 
     
