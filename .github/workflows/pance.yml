@@ -8,8 +8,8 @@ jobs:
     strategy:
       matrix:
         target:
-          - { scheme: "ppi", cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PP_BUILD_PROVISION_PROFILE_BASE64", ipa_name: "ppi.ipa", plist: "PPI_EXPORT_PLIST" }
-          - { scheme: "pance", cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64", ipa_name: "pance.ipa", plist: "PANCE_EXPORT_PLIST" }
+          - { scheme: "ppi", cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PP_BUILD_PROVISION_PROFILE_BASE64", plist: "PPI_EXPORT_PLIST" }
+          # - { scheme: "pance", cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64", profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64", ipa_name: "pance.ipa", plist: "PANCE_EXPORT_PLIST" }
 
     steps:
       - name: Check Xcode version
