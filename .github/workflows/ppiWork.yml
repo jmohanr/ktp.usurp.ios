@@ -60,3 +60,10 @@ jobs:
           -archivePath $RUNNER_TEMP/ppi.xcarchive \
           -exportOptionsPlist $EXPORT_OPTS_PATH \
           -exportPath $RUNNER_TEMP/build
+
+      - name: Upload application
+        uses: actions/upload-artifact@v3
+        with:
+          name: app
+          path: ${{ runner.temp }}/build/ppi.ipa
+          retention-days: 3
