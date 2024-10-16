@@ -47,10 +47,7 @@ jobs:
         run: |
           xcodebuild archive -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
           -scheme ppi \
-          -configuration Debug \
+          -configuration Release \
           -archivePath $RUNNER_TEMP/ppi.xcarchive \
           -sdk iphoneos \
-          -destination generic/platform=iOS \
-          -allowProvisioningUpdates \
-          CODE_SIGN_IDENTITY="$CODE_SIGN_IDENTITY" \
-          PROVISIONING_PROFILE_SPECIFIER="$PROVISIONING_PROFILE_SPECIFIER"
+          -destination generic/platform=iOS
