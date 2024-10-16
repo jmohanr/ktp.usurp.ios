@@ -70,4 +70,3 @@ jobs:
         with:
          name: pance.ipa
          path: ${{ github.workspace }}/build/ipa/pance.ipa
-
