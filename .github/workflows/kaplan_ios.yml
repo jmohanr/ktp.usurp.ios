@@ -71,7 +71,7 @@ jobs:
       - name: List archive contents (debugging)
         run: ls ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive
 
-      - name: Export ipa for ${{ matrix.config.scheme }} (verbose)
+      - name: Export ipa for ${{ matrix.config.scheme }}
         env:
           EXPORT_OPTIONS_PLIST: ${{ secrets[matrix.config.plist] }}
         run: |
