@@ -9,11 +9,9 @@ jobs:
       matrix:
         config:
           - scheme: "ppi"
-            cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64"
             profile: "PP_BUILD_PROVISION_PROFILE_BASE64"
             plist: "PPI_EXPORT_PLIST"
           - scheme: "pance"
-            cert: "BUILD_DISTRIBUTION_CERTIFICATE_BASE64"
             profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64"
             plist: "PANCE_EXPORT_PLIST"
 
@@ -31,7 +29,7 @@ jobs:
 
       - name: Install the Apple certificate and provisioning profile for ${{ matrix.config.scheme }}
         env:
-          BUILD_CERTIFICATE_BASE64: ${{ secrets[matrix.config.cert] }}
+          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_DISTRIBUTION_CERTIFICATE_BASE64 }}
           P12_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
           BUILD_PROVISION_PROFILE_BASE64: ${{ secrets[matrix.config.profile] }}
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
