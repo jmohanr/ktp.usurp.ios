@@ -7859,15 +7859,11 @@
 		};
 		890AD965356DA18552658DBDCA929865 /* [CP-User] CommonCrypto */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			name = "[CP-User] CommonCrypto";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/SCRIPT_OUTPUT_FILE_0",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMMON_CRYPTO_DIR=\"${SDKROOT}/usr/include/CommonCrypto\"\n\t\tif [ -f \"${COMMON_CRYPTO_DIR}/module.modulemap\" ]\n\t\t\tthen\n\t\t\techo \"CommonCrypto already exists, skipping\"\n\t\t\telse\n\t\t\t# This if-statement means we will only run the main script if the\n\t\t\t# CommonCrypto.framework directory doesn not exist because otherwise\n\t\t\t# the rest of the script causes a full recompile for anything\n\t\t\t# where CommonCrypto is a dependency\n\t\t\t# Do a \"Clean Build Folder\" to remove this directory and trigger\n\t\t\t# the rest of the script to run\n\t\t\tFRAMEWORK_DIR=\"${BUILT_PRODUCTS_DIR}/CommonCrypto.framework\"\n\t\t\tif [ -d \"${FRAMEWORK_DIR}\" ]; then\n\t\t\t\techo \"${FRAMEWORK_DIR} already exists, so skipping the rest of the script.\"\n\t\t\t\texit 0\n\t\t\t\tfi\n\t\t\t\tmkdir -p \"${FRAMEWORK_DIR}/Modules\"\n\t\t\t\techo \"module CommonCrypto [system] {\n\t\t\t\theader \\\"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\\\"\n\t\t\t\texport *\n\t\t\t\t}\" >> \"${FRAMEWORK_DIR}/Modules/module.modulemap\"\n\t\t\t\tln -sf \"${SDKROOT}/usr/include/CommonCrypto\" \"${FRAMEWORK_DIR}/Headers\"\n\t\t\t\tfi\n";

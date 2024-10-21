@@ -219,6 +219,7 @@
 				A9C7B9432CC69E3B00F9CC7A /* Resources */,
 				914AE1E53DE45C64E0E82FA1 /* [CP] Embed Pods Frameworks */,
 				12A4DC362765F5BA2B648054 /* [CP] Copy Pods Resources */,
+				A9C7B95B2CC6A8FC00F9CC7A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -462,6 +463,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mcat/Pods-mcat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A9C7B95B2CC6A8FC00F9CC7A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 		C326F5357076F9F64AD785F8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
