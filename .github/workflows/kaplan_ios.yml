@@ -70,7 +70,7 @@ jobs:
             -archivePath ./build/${{ matrix.config.scheme }}.xcarchive \
             -sdk iphoneos \
             -destination generic/platform=iOS \
-            -allowProvisioningUpdates | xcpretty
+            -allowProvisioningUpdates
 
       - name: List archive contents (debugging)
         run: ls ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive
