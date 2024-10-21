@@ -634,8 +634,7 @@
 		};
 		A9E557ED2CC66FF700B34BDD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -648,7 +647,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
@@ -730,8 +729,7 @@
 		};
 		F410CA4C074BEA23B703970E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -741,7 +739,7 @@
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mcat/Pods-mcat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mcat/Pods-mcat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -766,8 +764,7 @@
 		};
 		FA263C2848DA472165CD6B6E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -777,7 +774,7 @@
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mcat/Pods-mcat-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mcat/Pods-mcat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
