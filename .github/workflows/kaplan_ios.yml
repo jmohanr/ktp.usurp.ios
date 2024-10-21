@@ -62,14 +62,14 @@ jobs:
 # Step to clean the project before installing CocoaPods
       - name: Clean project
         run: |
-          xcodebuild clean -workspace ktp.usurp.ios/iOS-GitHubActions.xcworkspace \
+          xcodebuild clean -workspace iOS-GitHubActions.xcworkspace \
           -scheme ${{ matrix.config.scheme }} \
           -configuration Release
           
       - name: Build archive for ${{ matrix.config.scheme }}
         run: |
           xcodebuild archive \
-            -workspace ktp.usurp.ios/iOS-GitHubActions.xcworkspace \
+            -workspace iOS-GitHubActions.xcworkspace \
             -scheme ${{ matrix.config.scheme }} \
             -configuration Release \
             -archivePath ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive \
