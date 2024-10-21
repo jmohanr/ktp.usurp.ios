@@ -25,8 +25,10 @@ jobs:
       - name: Install CocoaPods
         run: |
           rm -rf Pods
+          rm -rf Podfile.lock
           rm -rf ~/Library/Developer/Xcode/DerivedData/*
-          pod install
+          pod install --project-directory=ktp.usurp.ios
+          
 
       - name: Install the Apple certificate and provisioning profile for ${{ matrix.config.scheme }}
         env:
