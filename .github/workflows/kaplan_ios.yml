@@ -66,7 +66,6 @@ jobs:
             -configuration Release \
             -archivePath ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive \
             -sdk iphoneos \
-            -destination generic/platform=iOS \
             -allowProvisioningUpdates \
              -skipPackagePluginValidation \
           COMPILER_INDEX_STORE_ENABLE=NO \
