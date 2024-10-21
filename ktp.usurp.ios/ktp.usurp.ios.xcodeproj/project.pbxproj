@@ -411,6 +411,7 @@
 		};
 		5DE5448F35E5FE141BBC6211 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
