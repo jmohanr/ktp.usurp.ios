@@ -29,7 +29,7 @@ jobs:
       - name: Install CocoaPods
         run: |
           rm -rf Podfile.lock
-          pod install --project-directory=ktp.usurp.ios
+          pod install --project-directory=iOS-GitHubActions
           
 
       - name: Install the Apple certificate and provisioning profile for ${{ matrix.config.scheme }}
@@ -62,14 +62,14 @@ jobs:
 # Step to clean the project before installing CocoaPods
       - name: Clean project
         run: |
-          xcodebuild clean -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
+          xcodebuild clean -workspace ktp.usurp.ios/iOS-GitHubActions.xcworkspace \
           -scheme ${{ matrix.config.scheme }} \
           -configuration Release
           
       - name: Build archive for ${{ matrix.config.scheme }}
         run: |
           xcodebuild archive \
-            -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
+            -workspace ktp.usurp.ios/iOS-GitHubActions.xcworkspace \
             -scheme ${{ matrix.config.scheme }} \
             -configuration Release \
             -archivePath ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive \
