@@ -8,12 +8,12 @@ jobs:
     strategy:
       matrix:
         config:
-          - scheme: "ppi"
-            profile: "PP_BUILD_PROVISION_PROFILE_BASE64"
-            plist: "PPI_EXPORT_PLIST"
-          # - scheme: "pance"
-          #   profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64"
-          #   plist: "PANCE_EXPORT_PLIST"
+          # - scheme: "ppi"
+          #   profile: "PP_BUILD_PROVISION_PROFILE_BASE64"
+          #   plist: "PPI_EXPORT_PLIST"
+          - scheme: "pance"
+            profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64"
+            plist: "PANCE_EXPORT_PLIST"
           # - scheme: "medical"
           #   profile: "MEDICAL_BUILD_PROVISION_PROFILE_BASE64"
           #   plist: "MEDICAL_EXPORT_PLIST"
