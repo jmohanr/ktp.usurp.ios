@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>533824793384-dmc9hinkdooq9lomovnib4f18ffup1bd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.533824793384-dmc9hinkdooq9lomovnib4f18ffup1bd</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>533824793384-nkml1ij4208fl39028594rg5q8sj21s2.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCXsQd6ojidClaZZIzFsA-uWrWc_ckn5X4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>533824793384</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.kaplan.ppi</string>
+	<key>PROJECT_ID</key>
+	<string>kaplan-medical-e6cba</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kaplan-medical-e6cba.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:533824793384:ios:0c6ec8f6fe296bce383e1d</string>
+</dict>
+</plist>
