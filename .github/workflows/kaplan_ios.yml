@@ -25,7 +25,6 @@ jobs:
       - name: Install CocoaPods
         run: |
           rm -rf Pods
-          rm -rf Podfile.lock
           rm -rf ~/Library/Developer/Xcode/DerivedData/*
           pod install
 
