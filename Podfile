@@ -17,6 +17,9 @@ def dependency_pods
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Messaging'
   pod 'Apollo', '1.0.6'
+  pod 'JSONWebToken', :git => 'https://github.com/radianttap/JSONWebToken.swift.git', :branch => 'podspec'
+  pod 'JWTDecode'
+
 end
 
 target 'medical' do

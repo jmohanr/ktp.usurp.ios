@@ -1,0 +1,38 @@
+{
+  "name": "JSONWebToken",
+  "version": "2.3",
+  "summary": "Swift library for JSON Web Tokens (JWT).",
+  "homepage": "https://github.com/kylef/JSONWebToken.swift",
+  "license": {
+    "type": "BSD",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Kyle Fuller": "kyle@fuller.li"
+  },
+  "source": {
+    "git": "https://github.com/kylef/JSONWebToken.swift.git"
+  },
+  "source_files": "Sources/JWT/*.swift",
+  "platforms": {
+    "ios": "9.0",
+    "osx": "10.12",
+    "tvos": "12.0",
+    "watchos": "4.0"
+  },
+  "requires_arc": true,
+  "module_name": "JWT",
+  "exclude_files": [
+    "Sources/JWT/HMACCryptoSwift.swift"
+  ],
+  "swift_versions": "5.0",
+  "pod_target_xcconfig": {
+    "SWIFT_INCLUDE_PATHS": "$(PODS_ROOT)/JSONWebToken/"
+  },
+  "script_phases": {
+    "name": "CommonCrypto",
+    "script": "COMMON_CRYPTO_DIR=\"${SDKROOT}/usr/include/CommonCrypto\"\n\t\tif [ -f \"${COMMON_CRYPTO_DIR}/module.modulemap\" ]\n\t\t\tthen\n\t\t\techo \"CommonCrypto already exists, skipping\"\n\t\t\telse\n\t\t\t# This if-statement means we will only run the main script if the\n\t\t\t# CommonCrypto.framework directory doesn not exist because otherwise\n\t\t\t# the rest of the script causes a full recompile for anything\n\t\t\t# where CommonCrypto is a dependency\n\t\t\t# Do a \"Clean Build Folder\" to remove this directory and trigger\n\t\t\t# the rest of the script to run\n\t\t\tFRAMEWORK_DIR=\"${BUILT_PRODUCTS_DIR}/CommonCrypto.framework\"\n\t\t\tif [ -d \"${FRAMEWORK_DIR}\" ]; then\n\t\t\t\techo \"${FRAMEWORK_DIR} already exists, so skipping the rest of the script.\"\n\t\t\t\texit 0\n\t\t\t\tfi\n\t\t\t\tmkdir -p \"${FRAMEWORK_DIR}/Modules\"\n\t\t\t\techo \"module CommonCrypto [system] {\n\t\t\t\theader \\\"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\\\"\n\t\t\t\texport *\n\t\t\t\t}\" >> \"${FRAMEWORK_DIR}/Modules/module.modulemap\"\n\t\t\t\tln -sf \"${SDKROOT}/usr/include/CommonCrypto\" \"${FRAMEWORK_DIR}/Headers\"\n\t\t\t\tfi",
+    "execution_position": "before_compile"
+  },
+  "swift_version": "5.0"
+}
