@@ -1,6 +1,0 @@
-framework module Pods_nclex {
-  umbrella header "Pods-nclex-umbrella.h"
-
-  export *
-  module * { export * }
-}
