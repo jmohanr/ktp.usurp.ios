@@ -21,12 +21,15 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v3
-
+        
+      - name: Delete Derived Data
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData/*
+          
       - name: Install CocoaPods
         run: |
           rm -rf Pods
           rm -rf Podfile.lock
-          rm -rf ~/Library/Developer/Xcode/DerivedData/*
           pod install --project-directory=ktp.usurp.ios
           
 
@@ -57,7 +60,13 @@ jobs:
           # Apply provisioning profile
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
-
+# Step to clean the project before installing CocoaPods
+      - name: Clean project
+        run: |
+          xcodebuild clean -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
+          -scheme ${{ matrix.config.scheme }} \
+          -configuration Release
+          
       - name: Build archive for ${{ matrix.config.scheme }}
         run: |
           xcodebuild archive \
