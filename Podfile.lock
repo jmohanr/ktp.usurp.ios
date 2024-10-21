@@ -110,8 +110,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.11.0):
     - GoogleUtilities/Logger
-  - JSONWebToken (2.3)
-  - JWTDecode (3.0.1)
   - Locksmith (4.0.0)
   - MarqueeLabel/Swift (3.2.1)
   - Mixpanel (3.6.2)
@@ -142,8 +140,6 @@ DEPENDENCIES:
   - Firebase/Crashlytics
   - Firebase/Messaging
   - FMDB
-  - JSONWebToken (from `https://github.com/radianttap/JSONWebToken.swift.git`, branch `podspec`)
-  - JWTDecode
   - Locksmith
   - Mixpanel (= 3.6.2)
   - NotificationBannerSwift (= 2.0.1)
@@ -169,7 +165,6 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
-    - JWTDecode
     - Locksmith
     - MarqueeLabel
     - Mixpanel
@@ -182,16 +177,6 @@ SPEC REPOS:
     - SnapKit
     - SVProgressHUD
     - UICircularProgressRing
-
-EXTERNAL SOURCES:
-  JSONWebToken:
-    :branch: podspec
-    :git: https://github.com/radianttap/JSONWebToken.swift.git
-
-CHECKOUT OPTIONS:
-  JSONWebToken:
-    :commit: dbb0fc32c26b5d1487a2afcfa6362a6cd8fcea4b
-    :git: https://github.com/radianttap/JSONWebToken.swift.git
 
 SPEC CHECKSUMS:
   AEXML: 1e255ecc6597212f97a7454a69ebd3ede64ac1cf
@@ -208,8 +193,6 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 173fa22ce7d62c29332568e853b39b2525a0e584
   GoogleDataTransport: ea169759df570f4e37bdee1623ec32a7e64e67c4
   GoogleUtilities: c2bdc4cf2ce786c4d2e6b3bcfd599a25ca78f06f
-  JSONWebToken: 77831b1b166a66139a1d08c02a61b10d6b249c20
-  JWTDecode: 2eed97c2fa46ccaf3049a787004eedf0be474a87
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   MarqueeLabel: 2daf039bf916937c8a4c9adfc13577cc5e51b4ce
   Mixpanel: 0a78141d1a073308201f76c55c3e629535e72b47
@@ -223,6 +206,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UICircularProgressRing: 19927375b2b21b5fa5fd9582f15ccdef9659da16
 
-PODFILE CHECKSUM: ee528db7d01a55ceb86ddc70e583dbeab111102f
+PODFILE CHECKSUM: ec820d84699dc52937191f32acbb528ad963b1aa
 
 COCOAPODS: 1.15.2
