@@ -11,9 +11,9 @@ jobs:
           - scheme: "ppi"
             profile: "PP_BUILD_PROVISION_PROFILE_BASE64"
             plist: "PPI_EXPORT_PLIST"
-          - scheme: "pance"
-            profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64"
-            plist: "PANCE_EXPORT_PLIST"
+          # - scheme: "pance"
+          #   profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64"
+          #   plist: "PANCE_EXPORT_PLIST"
 
     steps:
       - name: Check Xcode version
@@ -24,8 +24,11 @@ jobs:
 
       - name: Install CocoaPods
         run: |
-          sudo gem install cocoapods
+          rm -rf Pods
+          rm -rf Podfile.lock
+          rm -rf ~/Library/Developer/Xcode/DerivedData/*
           pod install --project-directory=ktp.usurp.ios
+          
 
       - name: Install the Apple certificate and provisioning profile for ${{ matrix.config.scheme }}
         env:
@@ -64,7 +67,10 @@ jobs:
             -archivePath ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive \
             -sdk iphoneos \
             -destination generic/platform=iOS \
-            -allowProvisioningUpdates | xcpretty
+            -allowProvisioningUpdates \
+             -skipPackagePluginValidation \
+          COMPILER_INDEX_STORE_ENABLE=NO \
+          USE_INPUT_OUTPUT_FILE_LIST=NO | xcpretty
 
       - name: List archive contents (debugging)
         run: ls ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive
