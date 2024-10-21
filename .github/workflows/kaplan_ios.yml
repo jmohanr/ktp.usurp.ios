@@ -9,7 +9,7 @@ jobs:
       matrix:
         config:
           - scheme: "ppi"
-            profile: "PPI_BUILD_PROVISION_PROFILE_BASE64"
+            profile: "PP_BUILD_PROVISION_PROFILE_BASE64"
             plist: "PPI_EXPORT_PLIST"
           # - scheme: "pance"
           #   profile: "PANCE_BUILD_PROVISION_PROFILE_BASE64"
@@ -31,7 +31,7 @@ jobs:
       - name: Install CocoaPods
         run: |
           sudo gem install cocoapods
-          pod install --project-directory=iOS-GitHubActions
+          pod install
 
       - name: Install the Apple certificate and provisioning profile for ${{ matrix.config.scheme }}
         env:
