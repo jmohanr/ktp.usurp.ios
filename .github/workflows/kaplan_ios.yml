@@ -26,10 +26,10 @@ jobs:
         run: |
           rm -rf ~/Library/Developer/Xcode/DerivedData/*
           
-      - name: Install CocoaPods
-        run: |
-          rm -rf Podfile.lock
-          pod install
+      # - name: Install CocoaPods
+      #   run: |
+      #     rm -rf Podfile.lock
+      #     pod install
           
 
       - name: Install the Apple certificate and provisioning profile for ${{ matrix.config.scheme }}
