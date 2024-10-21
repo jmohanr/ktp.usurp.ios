@@ -28,7 +28,6 @@ jobs:
           
       - name: Install CocoaPods
         run: |
-          rm -rf Pods
           rm -rf Podfile.lock
           pod install --project-directory=ktp.usurp.ios
           
