@@ -21,13 +21,15 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v3
-
+        
+      - name: Delete Derived Data
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData/*
+          
       - name: Install CocoaPods
         run: |
-          rm -rf Pods
           rm -rf Podfile.lock
-          rm -rf ~/Library/Developer/Xcode/DerivedData/*
-          pod install --project-directory=ktp.usurp.ios
+          pod install
           
 
       - name: Install the Apple certificate and provisioning profile for ${{ matrix.config.scheme }}
@@ -57,11 +59,17 @@ jobs:
           # Apply provisioning profile
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
-
+# Step to clean the project before installing CocoaPods
+      - name: Clean project
+        run: |
+          xcodebuild clean -workspace iOS-GitHubActions.xcworkspace \
+          -scheme ${{ matrix.config.scheme }} \
+          -configuration Release
+          
       - name: Build archive for ${{ matrix.config.scheme }}
         run: |
           xcodebuild archive \
-            -workspace ktp.usurp.ios/ktp.usurp.ios.xcworkspace \
+            -workspace iOS-GitHubActions.xcworkspace \
             -scheme ${{ matrix.config.scheme }} \
             -configuration Release \
             -archivePath ${{ github.workspace }}/build/${{ matrix.config.scheme }}.xcarchive \
